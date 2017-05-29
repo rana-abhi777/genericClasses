@@ -9,6 +9,7 @@ target 'genericClasses' do
   pod "Hero"
   pod 'Material', '~> 2.0'
   pod 'EZSwiftExtensions'
+  pod 'NVActivityIndicatorView'
 
   target 'genericClassesTests' do
     inherit! :search_paths
