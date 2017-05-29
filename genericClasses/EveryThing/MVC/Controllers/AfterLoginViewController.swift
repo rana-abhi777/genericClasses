@@ -10,15 +10,23 @@ import UIKit
 
 class AfterLoginViewController: UIViewController {
 
+    //MARK: VARIABLES
+    //MARK: FUNCTIONS
+    func intialiseVC() {
+        self.setbackgroundColor(color: UIColor.color2)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        intialiseVC()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK: ACTIONS
+    
     
 }

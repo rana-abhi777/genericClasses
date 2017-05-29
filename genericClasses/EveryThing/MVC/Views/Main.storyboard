@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GC4-0z-swF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,24 +73,26 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" red="1" green="0.0" blue="0.0" alpha="0.61131465517241379" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="loginAfter"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNl-A8-nA2"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tVi-ZL-XlO" firstAttribute="top" secondItem="zKg-95-T1C" secondAttribute="bottom" constant="50" id="0RH-tx-erU"/>
                             <constraint firstItem="zKg-95-T1C" firstAttribute="top" secondItem="lyp-Dg-EXu" secondAttribute="bottom" constant="58" id="4fX-LW-8ni"/>
                             <constraint firstItem="tVi-ZL-XlO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FtN-fm-fgx"/>
                             <constraint firstItem="hba-fL-flH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jun-gS-K4b"/>
-                            <constraint firstItem="lyp-Dg-EXu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="gdh-vq-vwm"/>
+                            <constraint firstItem="lyp-Dg-EXu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M7a-1a-bTk"/>
                             <constraint firstItem="hba-fL-flH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lm1-1O-bu7"/>
                             <constraint firstItem="lyp-Dg-EXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pBv-mW-HaO"/>
                             <constraint firstItem="zKg-95-T1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vAf-BU-E4X"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="W0b-2V-SYK"/>
                     <connections>
                         <outlet property="txtFieldPassword" destination="tVi-ZL-XlO" id="798-Z5-L7e"/>
                         <outlet property="txtFieldUserName" destination="zKg-95-T1C" id="oZF-j8-bgb"/>
@@ -101,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--After Login View Controller-->
         <scene sceneID="s1x-CI-bWv">
             <objects>
-                <viewController id="BV9-3j-oes" sceneMemberID="viewController">
+                <viewController id="BV9-3j-oes" customClass="AfterLoginViewController" customModule="genericClasses" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pPy-Li-LPI"/>
                         <viewControllerLayoutGuide type="bottom" id="O3P-RA-KU0"/>
@@ -112,12 +113,34 @@
                     <view key="view" contentMode="scaleToFill" id="6R2-iB-esR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gjw-zz-eZD"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tx-09-ReA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="123"/>
+            <point key="canvasLocation" x="822" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mi5-OC-svj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GC4-0z-swF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ruI-mQ-Ddi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D5G-sB-Vrn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVq-Tf-tsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="123"/>
         </scene>
     </scenes>
 </document>

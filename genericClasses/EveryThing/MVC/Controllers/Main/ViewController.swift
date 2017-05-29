@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var btnLogin: Button!
     
 //MARK: VARIABLES
+    let afterLoginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "")
     
 //MARK: FUCTIONS
     func intialiseVC() {
@@ -25,11 +26,13 @@ class ViewController: UIViewController {
         txtFieldPassword.setTextField()
         self.setbackgroundColor(color: UIColor.color1)
     }
+    
 //MARK: VC LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         intialiseVC()
+        
         
         
     }
@@ -39,11 +42,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: ACTIONS
-    
+//MARK: ACTIONS
     @IBAction func btnLogin(_ sender: Any) {
         print("Using hero pod to instantiate another VC")
-        Alerts.shared
+        Loader.shared.start()
+        Timer.runThisAfterDelay(seconds: 3) { () -> () in
+            print("Prints this 2 seconds later in main queue")
+            Loader.shared.stop()
+        }
         
     }
 
