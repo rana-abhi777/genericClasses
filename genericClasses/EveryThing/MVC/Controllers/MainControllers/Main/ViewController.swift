@@ -28,11 +28,11 @@ class ViewController: UIViewController {
     }
     
     func setHeroIds() {
-        txtFieldUserName.heroID = "login"
-        txtFieldPassword.heroID = "login"
+//        txtFieldUserName.heroID = "login"
+//        txtFieldPassword.heroID = "login"
         
-        txtFieldUserName.heroModifiers = [.cascade]
-        txtFieldPassword.heroModifiers = [.cascade]
+        txtFieldUserName.heroModifiers = [.fade, .scale(0.5)]
+        txtFieldPassword.heroModifiers = [.fade, .scale(0.5)]
         
         btnLogin.heroID = "loginBtn"
         

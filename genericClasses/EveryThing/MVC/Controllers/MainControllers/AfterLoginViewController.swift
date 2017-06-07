@@ -26,13 +26,13 @@ class AfterLoginViewController: UIViewController {
         lblShowDetails.text = "Welcome \(userName), "
     }
     func setHero() {
-        btnBack.heroID = "login"
+//        btnBack.heroID = "login"
+//        
+//        lblHeading.heroID = "loginBtn"
+//        lblShowDetails.heroID = "loginBtn"
         
-        lblHeading.heroID = "loginBtn"
-        lblShowDetails.heroID = "loginBtn"
-        
-        lblShowDetails.heroModifiers = [.cascade]
-        lblHeading.heroModifiers = [.cascade]
+        lblShowDetails.heroModifiers = [.fade, .scale(0.5)]
+        lblHeading.heroModifiers = [.fade, .scale(0.5)]
     }
     //VC LIFE CYCLE
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class AfterLoginViewController: UIViewController {
     //MARK: ACTIONS
     
     @IBAction func btnBack(_ sender: Any) {
-        
+        _ = dismissVC(completion: nil)
     }
     
 }

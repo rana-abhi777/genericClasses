@@ -10,6 +10,8 @@ target 'genericClasses' do
   pod 'Material', '~> 2.0'
   pod 'EZSwiftExtensions'
   pod 'NVActivityIndicatorView'
+  pod 'DropDown'
+  pod 'IQKeyboardManagerSwift'
 
   target 'genericClassesTests' do
     inherit! :search_paths
